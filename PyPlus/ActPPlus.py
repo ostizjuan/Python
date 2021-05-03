@@ -141,10 +141,10 @@ def window():
                     [sg.Button('Salir', size= BUTTON, key= '-QUIT-', pad=((0,0),(20,0)))]
                 ]
     
-    window = sg.Window('Actividad 1 x Python Plus - TEORIA -', layout, margins=MARGINS, element_justification= 'center')
+    window = sg.Window('Actividad 1 x Python Plus - TEORIA -', layout, margins=MARGINS, element_justification= 'center', no_titlebar=True,grab_anywhere=True)
     while True:
         event, values = window.read()
-        if event in (sg.WIN_CLOSED, '-QUIT-'):
+        if event is '-QUIT-':
             break
         window.Hide()
         event_handler(event)
